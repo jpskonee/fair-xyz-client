@@ -32,7 +32,7 @@ const ImageCard:FC<ImageCardProps> = ({src, alt}) => {
         <div className="overflow-hidden">
           <img onPointerMove={revealTextHandler} src={src}  className={`relative backdrop-blur-0 ${showImg ? "" : "blur-md"} mouse hover:after:cur transition-all ease-linear duration-1000`} alt={alt} />
         </div>
-        <div style={{top: `${mousePosition.y}px`, left:  `${mousePosition.x}px`}} className={`absolute ${showText ? "" : "hidden"} text-lg`}>Click to {showImg ? "Hide" : "Reveal"}</div>
+        <div style={{top: `${mousePosition.y}px`, left:  `${mousePosition.x}px`}} className={`absolute select-none ${showText ? "" : "hidden"} text-lg`}>Click to {showImg ? "Hide" : "Reveal"}</div>
     </div>
   )
 }
